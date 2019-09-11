@@ -10,7 +10,6 @@ function J=ReturnTimeEntropy(P,W,eta)
 %   J=ReturnTimeEntropy(P,W,eta);
 n=size(W,2);
 PI=stadis(P);
-% eta=0.01;
 w_max=max(max(W));
 PI_min=min(PI);
 N_eta=ceil(w_max/(eta*PI_min))-1;

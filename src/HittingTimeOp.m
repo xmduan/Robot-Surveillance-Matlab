@@ -10,12 +10,9 @@ function [P_op,f]=HittingTimeOp(A,W,tau)
 %   W=[1 2 3;3 3 4;9 5 6];
 %   tau=10;
 %   [P_op,f]=HittingTimeOp(A,W,tau);
-%% Complete
 n=size(A,2);
-% A = ones(n,n);
 w_max=max(max(W));
 
-%%
 count = 1;
 location_nonzero = zeros(n,n);
 v_place = [];
@@ -55,12 +52,8 @@ b_eq = ones(n,1);
 
 A_ineq = -eye(total_nonzero);
 b_ineq = zeros(total_nonzero,1);
-%% In last section, we generated a random initial point P.
 
 
-% tau = 30;
-
-% x0 = 1/n*ones(n^2,1);
 
 fa=rand(total_nonzero,1);
 xnew = linprog(fa,A_ineq,b_ineq,A_eq,b_eq);

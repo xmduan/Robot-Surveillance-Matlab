@@ -6,7 +6,6 @@ A=P;
 A(A>0)=1;
 A_tmp=A;
 sum=0;
-%A is the adjcent matrix of the graph
 for i=1:n
     sum=sum+A_tmp;
     A_tmp=A_tmp*A;

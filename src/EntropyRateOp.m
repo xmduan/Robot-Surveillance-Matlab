@@ -18,7 +18,6 @@ for i=1:n
 end
 A_inv=ones(n,n);
 A_inv(A>0)=0;
-% A(W>0)=1;
 A_vec=zeros(n^2,1);
 A_inv_vec=zeros(n^2,1);
 A_eq1=zeros(n,n^2);
@@ -31,7 +30,6 @@ for i=1:n^2
         continue
     end       
 end
-%%%%%%%%evaluation function of NORMAL optimization%%%%%%%%%%%%%%%%%%%
     function f=myfun(x,PI)
         P=zeros(n,n);
         P(v_place)=x;
@@ -47,7 +45,6 @@ for i=1:n
     end
 end
 b_eq1=[ones(n,1);zeros(size(A_eq1,1)-n,1)];
-% b_eq2=[ones(n,1);zeros(2*n^2-n+1,1)];
 A1=[diag(A_vec);-diag(A_vec)];
 b1=[ones(n^2,1);-zeros(n^2,1)];
 a=1;
@@ -63,16 +60,6 @@ a=1;
         P_max(v_place)=y;
         H=-f;
 end
-% n=size(A,2);
-% yeta=max(sum(A.*repmat(sqrt(PI),[1,n]),2));
-% zeta=max(sum(A.*repmat(PI,[1,n]),2));
-% x=PI./zeta;
-% while sum(sum((abs(diag(x)*A*x-PI)>(1e-6))))
-%     x=x-1/(2*yeta)*(diag(x)*A*x-PI);
-% end
-% 
-% P_max=inv(diag(A*x))*A*diag(x);
-% H=-2*x'*A*diag(x)*log(x)+PI'*log(PI);
 
 
 

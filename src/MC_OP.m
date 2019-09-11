@@ -41,7 +41,6 @@ switch nargin
         if ~isa(varargin{2},'char')
             error('please input your option finally');
         else
-%             if varargin{2}=='MixingTimeOp'
             if size(varargin{1},1)~=size(varargin{1},2)
                 error('the adjacent matrix must be a square matrix');
             end
@@ -75,9 +74,6 @@ switch nargin
             if size(varargin{1},1)~=size(varargin{1},2)
                 error('the adjacent matrix must be a square matrix');
             end
-%             if sum(sum(abs(varargin{1}-varargin{1}')))~=0
-%                 error('you have input an asymetric adjace nt matrix');
-%             end
             A=varargin{1};
             switch varargin{3}
                 case 'MixingTimeOp'
@@ -132,9 +128,6 @@ switch nargin
             if size(varargin{1},1)~=size(varargin{1},2)
                 error('the adjacent matrix must be a square matrix!');
             end
-%             if sum(sum(abs(varargin{1}-varargin{1}')))~=0
-%                 error('you have input an asymetric adjacent matrix');
-%             end
             A=varargin{1};
             switch varargin{4}
                 case 'MixingTimeOp'
@@ -222,9 +215,6 @@ switch nargin
             if size(varargin{1},1)~=size(varargin{1},2)
                 error('the adjacent matrix must be a square matrix!');
             end
-%             if sum(sum(abs(varargin{1}-varargin{1}')))~=0
-%                 error('you have input an asymetric adjacent matrix');
-%             end
             A=varargin{1};
             switch varargin{5}
                 case 'MixingTimeOp'
@@ -334,9 +324,6 @@ switch nargin
             if size(varargin{1},1)~=size(varargin{1},2)
                 error('the adjacent matrix must be a square matrix!');
             end
-%             if sum(sum(abs(varargin{1}-varargin{1}')))~=0
-%                 error('you have input an asymetric adjacent matrix');
-%             end
             A=varargin{1};
             switch varargin{6}
                 case 'HittingTimeOp'

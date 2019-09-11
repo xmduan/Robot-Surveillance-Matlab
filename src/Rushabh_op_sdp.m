@@ -17,31 +17,33 @@ A_inv=ones(n,n);
 A_inv(A>0)=0;
 
 cvx_begin sdp
-%     variable Y(n,n) symmetric
-    variable Q(n,n) symmetric
-    variable X(n,n) semidefinite
+    variable Y(n,n) 
+%     variable Q(n,n) symmetric
+    variable X(n,n) 
     variable t
     minimize(trace(X))
-%     tmp=[t*(eye(n)+sqrt(PI)*sqrt(PI)')-sqrt(diag(PI))*Y*diag(PI)^(-1/2) eye(n);eye(n) X];
-      tmp=[t*(eye(n)+sqrt(PI)*sqrt(PI)')-Q eye(n);eye(n) X];
+    tmp=[t*(eye(n)+sqrt(PI)*sqrt(PI)')-sqrt(diag(PI))*Y*diag(PI)^(-1/2) eye(n);eye(n) X];
+%       tmp=[t*(eye(n)+sqrt(PI)*sqrt(PI)')-Q eye(n);eye(n) X];
     subject to
     tmp+tmp'>=0;
-%     for i=1:n
-%         Y(:,i)>=0;
-%     end
-%     for i=1:n
-%         Y(:,i)-t*ones(n,1)<=0;
-%     end
-Q>=zeros(n,n);
- diag(PI)^(-1/2)*Q*diag(PI)^(1/2)*ones(n,1) == t*ones(n,1);
-diag(PI)^(-1/2)*Q*diag(PI)^(1/2).*A_inv == 0;
-%     Y*ones(n,1)==t*ones(n,1);
+    for i=1:n
+        Y(:,i)>=0;
+    end
+    for i=1:n
+        Y(:,i)-t*ones(n,1)<=0;
+    end
+% Q>=zeros(n,n);
+%  diag(PI)^(-1/2)*Q*diag(PI)^(1/2)*ones(n,1) == t*ones(n,1);
+% diag(PI)^(-1/2)*Q*diag(PI)^(1/2).*A_inv == 0;
+    Y*ones(n,1)==t*ones(n,1);
     t>=0;
-%     Y.*repmat(PI,[1,n])==Y'.*(repmat(PI',[n,1]));
-%     X>=0;
-%     Y.*A_inv==zeros(n,n);
-    PI'*(Q.*W)*ones(n,1)==1;
+    Y.*repmat(PI,[1,n])==Y'.*(repmat(PI',[n,1]));
+    X>=0;
+    Y.*A_inv==zeros(n,n);
+%     PI'*(Q.*W)*ones(n,1)==1;
+    PI'*(Y.*W)*ones(n,1)==1;
 
 cvx_end
-P_op=diag(PI)^(1/2)*Q*diag(PI)^(-1/2)/t;
+% P_op=diag(PI)^(1/2)*Q*diag(PI)^(-1/2)/t;
+P_op=Y/t;
 end

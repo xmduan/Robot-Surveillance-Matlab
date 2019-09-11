@@ -22,7 +22,6 @@ for i=1:n
 end
 A_inv=ones(n,n);
 A_inv(A>0)=0;
-% A(W>0)=1;
 A_vec=zeros(n^2,1);
 A_inv_vec=zeros(n^2,1);
 A_eq1=zeros(n,n^2);
@@ -37,7 +36,6 @@ for i=1:n^2
 end
 diag_PI=diag(PI);
 q=sqrt(PI);
-%%%%%%%%evaluation function of NORMAL optimization%%%%%%%%%%%%%%%%%%%
     function f=Rushabh_eva(x,PI,W)
         P=zeros(n,n);
         P(v_place)=x;
@@ -51,7 +49,6 @@ for i=1:n
     end
 end
 b_eq1=[ones(n,1);zeros(size(A_eq1,1)-n,1)];
-% b_eq2=[ones(n,1);zeros(2*n^2-n+1,1)];
 A1=[diag(A_vec);-diag(A_vec)];
 b1=[ones(n^2,1);-zeros(n^2,1)];
     function [c,ceq]=nonlcon1(x)

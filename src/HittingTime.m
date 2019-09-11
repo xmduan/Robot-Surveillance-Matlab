@@ -35,7 +35,6 @@ for k = w_max+1:2*w_max
     R(D) = 0;
     F((k-1)*n+1:k*n,:) = P_sparse * R;
     F((k-1)*n+1:k*n,:) = F((k-1)*n+1:k*n,:) + P .* (W==(k-w_max));
-%     F((k-1)*n+1:k*n,:) = F((k-1)*n+1:k*n,:) + P .* Q{k-w_max};
     F_cumul = F_cumul + F((k-1)*n+1:k*n,:);
 end
 

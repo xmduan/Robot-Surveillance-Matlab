@@ -40,9 +40,6 @@ switch nargin
             if ~isa(varargin{1},'numeric')
                 error('please input your probability transition matrix firstly');
             end
-%             if sum(sum(abs(varargin{1}-varargin{1}')))~=0
-%             	error('you have input an asymetric markov transition probability matrix');
-%             end
             Markov_or_not(P);
             Irreducible_or_not(P);
         end
@@ -65,7 +62,7 @@ switch nargin
             case 'HittingTime'
                 error('please input your duration');
             case 'ReturnTimeEntropy'
-                error('please input your yeta');%truncation accuracy
+                error('please input your yeta');
             otherwise
                 error('please input legal option');
         end      
@@ -76,9 +73,7 @@ switch nargin
             P=varargin{1};
             Markov_or_not(P);
             Irreducible_or_not(P);
-%             if sum(sum(abs(varargin{1}-varargin{1}')))~=0
-%             	error('you have input an asymetric markov transition probability matrix');
-%             end
+
         end
         switch varargin{3}
             case 'stadis'
@@ -101,7 +96,7 @@ switch nargin
                 n=size(P,2);
                 W=zeros(n,n);
                 W(P>0)=1;
-%                 W=ones(n,n);
+
                 K=ReturnTimeEntropy(P,W,yeta);
             case 'HittingTime'
                 if ~isa(varargin{2},'numeric')
@@ -117,7 +112,7 @@ switch nargin
                 n=size(P,2);
                 W=zeros(n,n);
                 W(P>0)=1;
-%                 W=ones(n,n);
+
                 F=HittingTime(P,W,tau);
                 n=size(W,2);
                 w_max=max(max(W));
@@ -143,9 +138,6 @@ switch nargin
             P=varargin{1};
             Markov_or_not(P);
             Irreducible_or_not(P);
-%             if sum(sum(abs(varargin{1}-varargin{1}')))~=0
-%             	error('you have input an asymetric markov transition probability matrix');
-%             end
         end
         switch varargin{4}
             case 'stadis'
@@ -192,7 +184,6 @@ switch nargin
                 tau=varargin{3};
                 W=varargin{2};
                 F=HittingTime(P,W,tau);
-%                 maxsize=max(max(W))+tau;
                 n=size(W,2);
                 w_max=max(max(W));
                 for i=1:tau
@@ -213,14 +204,4 @@ switch nargin
     otherwise
         error('you have input too many parameters');
 end
-
-            
-%% verify the input 
-
-%% Rushabh: Kemeny
-%% Mishel:EntropyRate
-%% Xiaoming: HitingTime
-%% ReturnEntropy
-%% Boyd: MixingTime
-%% Stadis: Stationary Distribution
 
