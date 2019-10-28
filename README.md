@@ -40,8 +40,7 @@ Code efficiency are shown in the below tablet.
 |Star Graph|Kemeny|7.8910e-04s| 0.9552s|50%&50%|1 ms|
 |Ring Graph|Kemeny|4.1860e-04s|0.7187s|50%&50%|1 ms|
 |Complete Graph|Kemeny|4.3780e-04s|0.3816s|50%&50%|1 ms|
-|Random Graph|Kemeny|3.8760e-04s|0.5134
-s|50%&50%|1 ms|
+|Random Graph|Kemeny|3.8760e-04s|0.5134s|50%&50%|1 ms|
 |Line Graph|Kemeny|3.8330e-04s|0.5225s|50%&50%|1 ms|
 |Star Graph|Return Time Entropy|0.0513s|5.1133s|50%&50%|1 ms|
 |Ring Graph|Return Time Entropy|0.1183s|30.2850s|50%&50%|1 ms|
