@@ -27,28 +27,28 @@ Code efficiency are shown in the below tablet.
 
 | Graph Type | Calculated Parameter |Computing Time (Matlab) | Optimization Time(Matlab)|  Computing Time (Julia)|Optimization Time(Julia) |
 |:-:|:-:|:-:|:-:| :-:|:-:|
-|Star Graph|Hitting Time|4.8650e-04s|0.0566s|50%&50%|1 ms|
-|Ring Graph|Hitting Time|3.9410e-04s|0.0184s|50%&50%|1 ms|
-|Complete Graph|Hitting Time|6.5570e-04s|0.0251s|50%&50%|1 ms|
-|Random Graph|Hitting Time|6.6380e-04s|0.0247s|50%&50%|1 ms|
-|Line Graph|Hitting Time|7.3720e-04s|0.0190s|50%&50%|1 ms|
-|Star Graph|Entropy Rate|2.8690e-04s|0.5397s|50%&50%|1 ms|
-|Ring Graph|Entropy Rate|3.5170e-04s|1.1642s|50%&50%|1 ms|
-|Complete Graph|Entropy Rate|2.1030e-04s|0.0574s|50%&50%|1 ms|
-|Random Graph|Entropy Rate|3.4160e-04s|0.1854s|50%&50%|1 ms|
-|Line Graph|Entropy Rate|2.6370e-04s|0.1758s|50%&50%|1 ms|
-|Star Graph|Kemeny|7.8910e-04s| 0.9552s|50%&50%|1 ms|
-|Ring Graph|Kemeny|4.1860e-04s|0.7187s|50%&50%|1 ms|
-|Complete Graph|Kemeny|4.3780e-04s|0.3816s|50%&50%|1 ms|
-|Random Graph|Kemeny|3.8760e-04s|0.5134s|50%&50%|1 ms|
-|Line Graph|Kemeny|3.8330e-04s|0.5225s|50%&50%|1 ms|
+|Star Graph|Hitting Time|4.8650e-04s|0.0566s|0.0030s|1 ms|
+|Ring Graph|Hitting Time|3.9410e-04s|0.0184s|0.030s|1 ms|
+|Complete Graph|Hitting Time|6.5570e-04s|0.0251s|0.0019s|1 ms|
+|Random Graph|Hitting Time|6.6380e-04s|0.0247s|0.030s|1 ms|
+|Line Graph|Hitting Time|7.3720e-04s|0.0190s|0.030s|1 ms|
+|Star Graph|Entropy Rate|2.8690e-04s|0.5397s|9.99e-04s|1 ms|
+|Ring Graph|Entropy Rate|3.5170e-04s|1.1642s|9.99e-04s|1 ms|
+|Complete Graph|Entropy Rate|2.1030e-04s|0.0574s|1.00e-03s|1 ms|
+|Random Graph|Entropy Rate|3.4160e-04s|0.1854s|9.99e-04s|1 ms|
+|Line Graph|Entropy Rate|2.6370e-04s|0.1758s|9.99e-04s|1 ms|
+|Star Graph|Kemeny|7.8910e-04s| 0.9552s|0.0016s|1 ms|
+|Ring Graph|Kemeny|4.1860e-04s|0.7187s|0.0013s|1 ms|
+|Complete Graph|Kemeny|4.3780e-04s|0.3816s|0.0017s|1 ms|
+|Random Graph|Kemeny|3.8760e-04s|0.5134s|0.0016s|1 ms|
+|Line Graph|Kemeny|3.8330e-04s|0.5225s|0.0017s|1 ms|
 |Star Graph|Return Time Entropy|0.0513s|5.1133s|50%&50%|1 ms|
 |Ring Graph|Return Time Entropy|0.1183s|30.2850s|50%&50%|1 ms|
 |Complete Graph|Return Time Entropy|0.0097s|16.0799s|50%&50%|1 ms|
 |Random Graph|Return Time Entropy|0.0147s|20.0534s|50%&50%|1 ms|
 |Line Graph|Return Time Entropy|0.0188s|21.4639s|50%&50%|1 ms|
-|Star Graph|Mixing Time|3.8840e-04s|3.4760s|50%&50%|1 ms|
-|Ring Graph|Mixing Time|2.1500e-05s|0.7130s|50%&50%|1 ms|
-|Complete Graph|Mixing Time|2.1500e-05s|0.5978s|50%&50%|1 ms|
-|Random Graph|Mixing Time|2.2000e-05s|0.5635s|50%&50%|1 ms|
-|Line Graph|Mixing Time|2.2500e-05s|0.5645s|50%&50%|1 ms|
+|Star Graph|Mixing Time|3.8840e-04s|3.4760s|0.0018s|1 ms|
+|Ring Graph|Mixing Time|2.1500e-05s|0.7130s|0.0017s|1 ms|
+|Complete Graph|Mixing Time|2.1500e-05s|0.5978s|0.0016s|1 ms|
+|Random Graph|Mixing Time|2.2000e-05s|0.5635s|0.0019s|1 ms|
+|Line Graph|Mixing Time|2.2500e-05s|0.5645s|0.0016s|1 ms|
