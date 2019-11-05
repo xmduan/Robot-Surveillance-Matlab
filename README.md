@@ -47,8 +47,8 @@ Code efficiency are shown in the below tablet.
 |Complete Graph|Return Time Entropy|0.0097s|16.0799s|50%&50%|1 ms|
 |Random Graph|Return Time Entropy|0.0147s|20.0534s|50%&50%|1 ms|
 |Line Graph|Return Time Entropy|0.0188s|21.4639s|50%&50%|1 ms|
-|Star Graph|Mixing Time|3.8840e-04s|3.4760s|0.0018s|1 ms|
-|Ring Graph|Mixing Time|2.1500e-05s|0.7130s|0.0017s|1 ms|
-|Complete Graph|Mixing Time|2.1500e-05s|0.5978s|0.0016s|1 ms|
-|Random Graph|Mixing Time|2.2000e-05s|0.5635s|0.0019s|1 ms|
-|Line Graph|Mixing Time|2.2500e-05s|0.5645s|0.0016s|1 ms|
+|Star Graph|Mixing Time|3.8840e-04s|3.4760s|0.0018s|0.0899 ms|
+|Ring Graph|Mixing Time|2.1500e-05s|0.7130s|0.0017s|0.1909 ms|
+|Complete Graph|Mixing Time|2.1500e-05s|0.5978s|0.0016s|0.0749 ms|
+|Random Graph|Mixing Time|2.2000e-05s|0.5635s|0.0019s|0.2400 ms|
+|Line Graph|Mixing Time|2.2500e-05s|0.5645s|0.0016s|0.1570 ms|
