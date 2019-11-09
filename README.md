@@ -1,12 +1,12 @@
 Robot-Surveillance-Matlab
 ======
-This is a free open source matlab toolbox for calculating and optimizing a bunch of quantities and metrics that are related to Markov chains. It is motivated by the use of Markov chains in robotic applications where one or a group of robots randomly move on a graph to perform surveillance tasks. Details of the algorithms and mathematical formulas may be found in [professor Francesco Bullo's publications](http://motion.me.ucsb.edu/papers/index.html).
+This is a free open source matlab toolbox for calculating and optimizing a bunch of quantities and metrics that are related to Markov chains. It is motivated by the use of Markov chains in robotic applications where one or a group of robots randomly move on a graph to perform surveillance tasks. Details of the algorithms and mathematical formulas may be found in [professor Francesco Bullo's publications](http://motion.me.ucsb.edu/papers/Keyword/ROBOTIC-NETWORKS.html).
 # Installation
-* To install the toolbox into your matlab, please download [Robot Surveillance.mltbx](https://github.com/SJTUHan/Robot-Surveillance-Matlab/blob/master/Robot%20Surveillance.mltbx) into your workspace of matlab, then double click the file. Now all the function in the toolbox can be used.
-* The other way to use the toolbox is download and decompress the software package, then add all files into the workspace. 
+* To install the toolbox into your matlab, please download [Robot Surveillance.mltbx](https://github.com/SJTUHan/Robot-Surveillance-Matlab/blob/master/Robot%20Surveillance.mltbx) into your workspace of matlab, then double click the file and all the functions in the toolbox can be used.
+* The other way to use the toolbox is to download and unzip the software package, then add all files into the workspace. 
 # Usage
 ## Notice
-Functions in the package can be separated into two types: evaluation and optimization. For convex optimization problems, [CVX](http://cvxr.com/cvx/) is used, which means that CVX is necessary when using this kind of functions. For non-convex problems, [fmincon](https://www.mathworks.com/help/optim/ug/fmincon.html) is used. It should be noted that users can change the option of fmincon in the functions by themselves, no additional interfaces for changing them are offered in this version.
+Functions in the package can be categorized into two types: evaluation functions and optimization functions. For convex optimization problems, [CVX](http://cvxr.com/cvx/) is used, which means that CVX is necessary when using optimization functions of this kind. For non-convex optimization problems, [fmincon](https://www.mathworks.com/help/optim/ug/fmincon.html) is used. The users may set the options of the fmincon function by locating the function in the files, and no interfaces for changing them are offered in this version.
 ## Example
 Detailed user instructions can be found in documentations of the functions. See below for an example. 
 
@@ -21,9 +21,9 @@ tau=10;
 [F,K]=MC_OP(P,W,tau,'HittingTimeOp');
 ```
 ## Comparison with Julia
-Julia code can be seen here [Robot-Surveillance-Julia](https://github.com/SJTUHan/Robot-Surveillance-julia), test code can be found in the packages. We test star graph, line graph, ring graph, complete graph and random graph with n=8 points, respectively. It should be noted that in the test file, every graph is randomly set(except for complete graph). Thus, in order to compare the efficiency, particular graphs are used instead of random ones. Graph structures are shown as follow.
+Julia code can be found at [Robot-Surveillance-Julia](https://github.com/SJTUHan/Robot-Surveillance-julia), and test codes can be found in the packages. We test star graph, line graph, ring graph, complete graph and random graph with n=8 nodes, respectively. It should be noted that in the test file, every graph is randomly set (except for complete graph). Thus, in order to compare the efficiency, particular graphs are used instead of random ones. Graph structures are shown as follow.
 
-Code efficiency are shown in the below tablet.
+Code efficiency are shown in the table below.
 
 | Graph Type | Calculated Parameter |Computing Time (Matlab) | Optimization Time(Matlab)|  Computing Time (Julia)|Optimization Time(Julia) |
 |:-:|:-:|:-:|:-:| :-:|:-:|
